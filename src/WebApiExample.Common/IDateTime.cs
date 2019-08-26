@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApiExample.Web.Models
+namespace WebApiExample.Common
 {
-    public class Class1
-    {
-    }
+	public interface IDateTime
+	{
+		DateTime UtcNow { get; }
+	}
 }

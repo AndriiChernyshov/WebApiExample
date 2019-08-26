@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace WebApiExample.Common
 {
-    public class Class1
-    {
-    }
+	public class DateTimeAdapter : IDateTime
+	{
+		public DateTime UtcNow
+		{
+			get { return DateTime.UtcNow; }
+		}
+	}
 }

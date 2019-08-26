@@ -127,7 +127,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Ninject.Web.Common.cs" />
+    <Compile Include="App_Start\NinjectConfigurator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\OldTasksController.cs" />
+    <Compile Include="Controllers\V1\TasksController.cs" />
+    <Compile Include="Controllers\V2\TasksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -144,8 +148,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebApiExample.Common\WebApiExample.Common.csproj">
+      <Project>{D9D2800B-FD68-4000-AEA1-2C672258E446}</Project>
+      <Name>WebApiExample.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApiExample.Web.Common\WebApiExample.Web.Common.csproj">
+      <Project>{287aec98-042d-415f-b3cf-d7394d8e6dc7}</Project>
+      <Name>WebApiExample.Web.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApiExample.Web.Models\WebApiExample.Web.Api.Models.csproj">
+      <Project>{46ee7294-1de3-4679-8069-e65e73057091}</Project>
+      <Name>WebApiExample.Web.Api.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
